@@ -1,0 +1,69 @@
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1234567890
+
+Ha HaHa
+
+cat
+mat
+pat
+rat
+fat
+tat
+bat
+zat
+lat
+sat
+dat
+yat
+qat
+nat
+jat
+gat
+vat
+kat
+hat
+wat
+
+MataCharacters (Need to be escaped):
+.[{()\^$|?*+
+
+coreyms.com
+
+321--555-4321
+123.555.1234
+123*555*1234
+800-555-4321
+900-555-4321
+(208)987-6543
+
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs Robinson
+Mr. T
+
+[] - Matches Character in brackets
+[^ ] - Matches Characters not in brackets
+| - Either Or
+() - Group
+
+
+Quantifiers:
+* - 0 or More
++ - 1 or More
+? - 0 or One
+{3} - Exact Number
+{3,4} - Range of Number (Minimum, Maximum)
+^ - Start with whatever is after
+$ - Shows this is the end of the line
+
+#### Sample Ragex ####
+[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-z0-9-]
+
+// Will find all the Mr(s|.).
+M(r|s|rs)\.?\s[A-Z]\w*
+
+[a-zA-Z0-9_.()+~-]+@[a-zA-Z-]+\.(com|edu|net)
+
+https?://[\w.]+

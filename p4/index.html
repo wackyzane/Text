@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/color.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+</head>
+<body>
+    <div class="grid-container-v2">
+        <div class="item1">
+            <div class="navbar">
+                <a href="../index.html">Home</a>
+                <a href="#news">News</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Classmates Pages
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="http://www.westada.tech/b2/josephm">Joseph</a>
+                    <a href="http://www.westada.tech/b2/joshs">Josh</a>
+                    </div>
+                </div>
+            </div>
+            <h1>React Explained | By: Perry Karlsen 03/15/19</h1>
+        </div>
+        <div class="item3">
+            <h2>React</h2>
+
+            <hr>
+
+            <h4>Running React</h4>
+            <p>
+                1: This is the website we used to run react. Once you start it up click on the blue box and run react. You can log into github to save your work and
+                and program code while seeing it update in real time.
+            </p>
+
+            <hr>
+
+            <h4>Version React</h4>
+            <p>
+                2: This was one of the first things we did in react where we made the text change based on what version we inputed in the code. On line 25 of the
+                first picture is where we determine that eny version above 1 is a invalid version and will put that in the place of it. In the second picture you 
+                see where I put the version in on render. It only works with numbers and that is why when I put in the sentence is just leaves it there.
+            </p>
+
+            <hr>
+
+            <h4>Random Dad Jokes</h4>
+            <p>
+                3.0: We made a random generator for dad jokes. For the beginning we call in the class app and extend it to react.component so that we can use the 
+                identifier 'this'. We use super(); to actually call out the function that allows for 'this'. We then set joke to null and isfetchingjoke to false. 
+                This is so we can't have multiple requests coming in at the same time. After that we bind onSearchChange and searchJokes so that we can callback the function without it losing its meaning.
+                That is everything for the constructor. 
+            </p>
+            <p>
+                3.2: Next we start with the functions. The first is searchJokes which we limit the amount it shows to 20.
+                We also setState of isFetchingJoke to true so that people can't keep pressing the button and spamming the requests to look for jokes.
+                WE now use fetch to grab the jokes the the website <a href="https://icanhazdadjoke.com/" target="_blank">icanhazdadjoke.com</a> and set it to the limit we stated (20).
+                Now we need to set the method which determines waht we are doing on the site. This is told on the site to get the jokes. We set method to "GET".
+                we also made header and put Accept: to "application/json". This is for the same reason as method. At the end of fetch we put what it will do with the jokes after the program has gotten them.
+                We put all the jokes into the array jokes and set isFetchingJoke to false.
+            </p>
+            <p>
+                3.4: This is a small method that changes the searchTerm to the value we give it. We will give it a value in a different method.
+            </p>
+            <p>
+                3.6: This is also a somewhat small method. This method grabs the jokes we just got and sets them in a unordered list with each of the jokes being an item in that list.
+            </p>
+            <p>
+                3.8: Last is the render function. In the return we put our div with class App so we have customization. Next we call in out JS with searchForm. In this call we also set all variables, like if it is searching or if you only want one search result.
+                I will explain searchForm result in section 4. Under our search bar and buttons we have it says if it is searching results if isFetchingJoke is true. Then we render the jokes.
+                At the end of the page we have render correctly and load the page.
+            </p>
+        <div class="item4">
+            <h2>Pictures</h2>
+
+            <hr>
+
+            <h4>1. Starting React</h4>
+            <a target="blank_" href="https://codesandbox.io/">
+                <img width="80%" src="images/reactWebsite.png" alt="React website">
+            </a>
+
+            <hr>
+
+            <h4>2. Version React</h4>
+            <a target="blank_" href="images/react1.png">
+                <img width="80%" src="images/react1.png" alt="React Version">
+            </a>
+            <a target="blank_" href="images/react2.png">
+                <img width="80%" src="images/react2.png" alt="React Version 2">
+            </a>
+
+            <hr>
+
+            <h4>3. Dad Jokes React</h4>
+            <a target="blank_" href="images/dadJoke1.png">
+                <img width="80%" src="images/dadJoke1.png" alt="React Dad Jokes">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

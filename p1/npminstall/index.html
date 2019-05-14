@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/color.css">
+  <title>MySql workings</title>
+</head>
+<body>
+  <div class="grid-container-v2">
+    <div class="item1">
+      <div class="navbar">
+        <a href="../../index.html">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+          <button class="dropbtn">Classmates Pages
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="http://www.westada.tech/b2/josephm">Joseph</a>
+            <a href="http://www.westada.tech/b2/joshs">Josh</a>
+          </div>
+        </div>
+      </div>
+      <h1>How to use Node.js</h1>
+    </div>
+    <div class="item3">
+      <h4>Explanation</h4>
+      <p>
+        1. Make a new folder called MERN. Here we will place all the files
+        we will use to make a database. The first thing we will make is
+        a program saying hello world. Right click in MERN and open a terminal.
+        From here you will type in "gedit node_test_001.js". In the folder
+        type in what I have in the picture, what it does is set variables,
+        then makes the server on localhost:8080. On the page is some text with
+        the current time. Try copying it to see how it works. (Click Picture to enlarge)
+      </p>
+      <hr>
+      <p>
+        2. Node doesn't like using \' to use the '. So just dont do it. Join is used to link two different things into one table.
+        We used it to link names and species of an animal and also the owner. You can add as many things as you want and order how you like.
+        Everything we learned is in the picture in the 'var sql=" "'.
+      </p>
+      <hr>
+      <p>
+        3. We did a three table join which is like the the text above but instead we have a third table in it.
+        This is the mysql instead of node. The import lines are 92 to 95, they show how we minpulated the code.
+        We had to add the section of the table in select. Then specify the first,
+        which is customer. The last two lines show which table it is connected too
+        and how it is connected. At the end of line 95, it has what we are specifing, so we had
+        where the species is dog and the gender of the dog is a male. Like just says it can but doesn't have to be capitalized.
+        </head>
+      </p>
+      <hr>
+      <p>
+        4. The entity relationship diagram shows each table and its components.
+        It shows which components are primary keys and foreign keys, and which can accept no answer or must be answered.
+        Lastly it shows how each table is connected to the other tables.
+        For example customer is linked to animal through a line which end with 3 splits into animal.
+        It shows that one component from customer(IDcustomer), can be connected to multiple other keys in the animal table.
+        The keys connect each other.
+      </p>
+      <hr>
+      <p>
+        5. There is two ways to put in Find(). The first is through node.js by making a file filed with what is in the picture,
+        the other is by typing in the commands that are in the picture of the command console.
+      </p>
+      <hr>
+      <p>
+        6. type what ever is on the attached picture into mongo from the command console.
+        The only thing that might not make sense is upsert true which means that if the name is not found,
+        put it in.
+      </p>
+      <hr>
+      <p>
+        7. How to scuff machine with compass. Step one get into your command console and type in the commands you see in the picture.
+        Step to is to open compass. If it doesn't break your VM, good for you, if it does try making it a icon on the desktop and it might
+        fix it for you.
+      </p>
+      <hr>
+      <p>
+        8. To do a find in mongodb you need to put in db.(collection).find({filter},{projection},{cursor modifier});
+        You put in your own collection without the () for your code.
+        Filter is what you are looking for, whether a name or something else. You leave the {} with this and the other two.
+        For projection you can leave it blank. It says what to show by setting them to one and zero with the auto being everything shown (set to one).
+        The cursor modifier you want to sort it. You can also add .pretty(); at the end to make it look better.
+      </p>
+      <hr>
+      <p>
+        9. Regex in mongo isn't complicated if you already know regex. I will go under the assumption you know regex. If you don't you can use a regex
+        cheatsheet online to know what each symbol does. After you have put in what your type your searching for like "name" or "age" and have a : after it
+        you can start your regex with a / and end it with another /. You can put normal regex in the middle and it will look for it like that. You don't need 
+        anything like the $and before it.
+      </p>
+    </div>
+    <div class="item4">
+      <h1>Pictures</h1>
+      <h4>1. Saying hello world</h4>
+      <a target="blank_" href="images/Screenshot from 2018-10-15 09-50-43.png">
+        <img width="80%" src="images/Screenshot from 2018-10-15 09-50-43.png" alt="VM Picture">
+      </a>
+
+      <hr>
+
+      <h4>2. SQL Node Join</h4>
+        <a target="blank_" href="images/nodejoin.png">
+          <img width="80%" src="images/nodejoin.png" alt="2 Table Join Node">
+        </a>
+
+      <hr>
+
+      <h4>3. Three Table Join</h4>
+        <a target="blank_" href="images/3-joins.png">
+          <img width="80%" src="images/3-joins.png" alt="3 Table Join">
+        </a>
+
+      <hr>
+
+      <h4>4. Entity Relationship Diagram(ERD)</h4>
+        <a target="blank_" href="images/connectiondiagram.png">
+          <img width="80%" src="images/connectiondiagram.png" alt="Entity Relationship Diagram">
+        </a>
+
+      <hr>
+
+      <h4>5. Find()</h4>
+        <a target="blank_" href="images/findconsole.png">
+          <img width="80%" src="images/findconsole.png" alt="Find on Console">
+        </a>
+        <a target="blank_" href="images/nodejsfind.png">
+          <img width="80%" src="images/nodejsfind.png" alt="Find on Console">
+        </a>
+
+        <hr>
+
+        <h4>6. The Arts and Crafts of Rewriting Mongo</h4>
+          <a target="blank_" href="images/mongoEZ.png">
+            <img width="80%" src="images/mongoEZ.png" alt="Find on Console">
+          </a>
+
+        <hr>
+
+        <h4>7. A working compass</h4>
+          <a target="blank_" href="images/mongoEZ.png">
+            <img width="80%" src="images/mongoEZ.png" alt="Find on Console">
+          </a>
+
+        <hr>
+
+        <h4>8. Mongodb Find</h4>
+        <a target="blank_" href="images/mongodbfind.png">
+          <img width="80%" src="images/mongodbfind.png" alt="Find on Mongodb with pretty()">
+        </a>
+        <a target="blank_" href="images/filter.png">
+          <img width="80%" src="images/filter.png" alt="Find on Mongodb with pretty()">
+        </a>
+
+        <hr>
+
+        <h4>9. Mongo Regex</h4>
+        <a target="blank_" href="images/mongoRegex.png">
+          <img width="80%" src="images/mongoRegex.png" alt="Find on Mongodb with Regex">
+        </a>
+        <h4>10. Regex</h4>
+        <a target="blank_" href="images/regex.png">
+          <img width="80%" src="images/regex.png" alt="How To Regex">
+        </a>
+    </div>
+</body>
+</html>

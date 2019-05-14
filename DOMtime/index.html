@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time</title>
+    <link rel="stylesheet" href="css/time.css">
+    <script src="js/time.js"></script>
+</head>
+<body onload='renderTime();'>
+    <h1>DOM Time! / Created by Perry K / 4/18/19</h1>
+    <div class="boxed">
+        <div id="clockDisplay" class="container"></div>
+    </div>
+</body>
+<script>
+    let getBody = document.body;
+
+    let newElement = document.createElement("h1");
+
+    let date = new Date();
+    console.log(date);
+    let currentHour = date.getHours();
+    let currentDay = date.getDay();
+    console.log(currentHour);
+    let createTxtMsg;
+    if (currentHour >= 7.45 && currentHour < 9.15) {
+        createTxtMsg = "1st Period";
+    } else if (currentHour >= 9.2 && currentHour < 10.52) {
+        createTxtMsg = "2nd Period";
+    } else if (currentHour >= 10.52 && currentHour < 11.31) {
+        createTxtMsg = "Lunch";
+    } else if (currentHour >= 11.36 && currentHour < 13.07) {
+        createTxtMsg = "3rd Period";
+    } else if (currentHour >= 13.12 && currentHour < 14.42) {
+        createTxtMsg = "4th Period"
+    } else {
+        createTxtMsg = "Not in class";
+    }
+
+    if (currentDay == "Saturday" || currentDay == "Sunday") {
+        createTxtMsg = "Weekend";
+    }
+
+    let createEleTxt = document.createTextNode(createTxtMsg);
+
+    newElement.appendChild(createEleTxt);
+
+    getBody.appendChild(newElement);
+
+    newElement.setAttribute("class", "welcome");
+
+</script>
+</html>

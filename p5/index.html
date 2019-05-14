@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    
+    <title>DOM-Inater</title>
+</head>
+<body style="background-color: rgb(123, 168, 219);">
+    <div id="page"></div>
+    <div class="my-4"></div>
+    <div id="wrap">
+        <!-- Class= Make a card with a background color of dark, margin auto, and a width of 75%-->
+        <div class="card bg-dark m-auto w-75">
+            <!-- Card-header puts all the stuff in it at the top of the card and text-light makes the text bright-->
+            <h5 class="card-header text-light">
+                <span class="h1 text-warning font-italic mr-2">JavaScript</span> Dom-Inator
+                <span class="btn btn-sm btn-danger float-right" onclick="hide_Ele()">x</span>
+            </h5>
+            <div class="card-body row">
+                <div class="input-group">
+                    <input type="text" class="col-2" placeholder="tagName">
+                    <input type="text" class="col-10" placeholder="className">
+                    <input type="text" class="col-2" placeholder="id">
+                    <input type="text" class="col-8" placeholder="innerHTML">
+                    <input type="text" class="col-2" placeholder="parent id">
+                </div>
+                <div class="btn-group mt-2">
+                    <span class="btn btn-warning" onclick="create_Ele()">Create New Element</span>
+                    <span class="btn btn-danger" onclick="remove_Ele()">Remove Last Element</span>
+                    <span class="btn btn-outline-secondary" onclick="reset_Ele()">Reset</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <center><h1 style="margin-top: 25px;">Explanation</h1></center>
+    <hr>
+    <p>
+        1. To start this Explanation, I first need to explain that we need out html set up in a specific way. 
+        We set up a div with id being page so we can put all our added elements in it.
+        Next we put some margin on top and bottom in another div right under it. 
+        Now we make a div with an id of wrap that contains everything else we make.
+        This div will make it possible to hide our element creator later on.
+        Then we made the actual show of the element adder. 
+        We put in a div with a Bootstrap card with a background that is dark, margin that is auto set and a width that is 75%.
+        Next we put the title of JavaScript that has the class card-header(to section off the card) and text-light to make the text white on black background.
+        We the span that and give the JavaScript some customization and put an X at the right side with a colored button and a onclick element to close the box.
+        Next we section off another piece of the card to body so we can put out 5 different inputs to make the elements.
+        These all are waiting to be submitted by the buttons under which have onclick elements for creating, removing and resetting.
+    </p>
+    <p>
+        2. Now we continue on to the actual JS.
+        First we make two variables using Const, that grab all the inputs on the page and grab the page div so we can put in elements to that div.
+        We also make an empty variable called parent with let.
+        Now we are out first function called create_Ele();
+        First we create a new variable called element that is set to the first input tagName. (like h1, p, div, etc.)
+        We now make a for loop and in it we make a variable called attribute that grabs whatever input it is on and takes the placeholder. (It is set to whatever loop it is on)
+        Also make a another variable called value that takes the value of the input it is on.
+        Next we make an if statement where if something is typed in, replace the placeholder with the value.
+        Then we make another on where if the attribute is equal to the parent ID and the value, make a variable called div that is set to whatever the value you placed in.
+        Then append that and put in the new tag you just made.
+        Escentually you have just checked to see if you asked to put your new tag into another div you have made and if so you put it into it.
+        Otherwise it will just put it into the premade div called page.
+        Lastly we make out variable parent equal to the div we are currently in, which is usually page unless you make another div inside.
+    </p>
+    <p>
+        3. This will be a short one as explaining the remove is very simple and only has two lines.
+        The first line in the function remove_Ele(); is to make a variable called last_child.
+        This variable grabs the last element made in parent we set before.
+        Then we remove it with remove();.
+    </p>
+    <p>
+        4. Next we have reset which is another short function.
+        Make a for loop and in it make all the input's value equal to blank.
+    </p>
+    <p>
+        5. The second to last function is the hide function called hide_Ele();.
+        First we make a variable called wrap that is equal to the id wrap we have on our page.
+        We add a class to wrap called d-none which is in bootstrap to show nothing.
+        Next we make another variable that is called show_btn and in it we make a element of span with this variable.
+        We then set the text of the span to Show Panel, we set the id to sBtn, we make the class into bootstrap with btn btn-primary m-5 mt-5, and lastly we make an attribute called onclick which is set to show_Ele();.
+        Last thing we do it place our button into the div page so we can get rid of it.        
+    </p>
+    <p>
+        6. This is the last function called show_Ele();.
+        First we make a variable called wrap that is equal to the id wrap we have on our page.
+        We add a class to wrap called d-block to show all the code we had hidden.
+        Then we set btn to the id sBtn we set in hide.
+        We make another variable called p_btn and set it to the div it is in.
+        Then we remove our child called btn.
+    </p>
+    <a href="images/firstPartJava.png"><img src="images/firstPartJava.png" alt="First part of the code"></a>
+    <a href="images/secondPartJava.png"><img src="images/secondPartJava.png" alt="Second part of the code"></a>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
